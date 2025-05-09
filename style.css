@@ -1,0 +1,265 @@
+/* Variáveis de cores */
+:root {
+    --marsala: #80002a;
+    --marsala-dark: #600020;
+    --marsala-light: #a0003a;
+    --petroleo: #234e52;
+    --petroleo-dark: #1a3a3d;
+    --petroleo-light: #2d6268;
+    --rosa: #ffdde2;
+    --rosa-dark: #ffb8c4;
+    --rosa-light: #fff0f2;
+    --cinza: #ececec;
+    --background: #ffffff;
+    --foreground: #333333;
+  }
+  
+  /* Estilos gerais */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--foreground);
+    background-color: var(--background);
+    line-height: 1.5;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  /* Cabeçalho */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--marsala);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .logo a:hover {
+    color: var(--marsala-dark);
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .menu-link {
+    text-decoration: none;
+    color: var(--foreground);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .menu-link:hover {
+    color: var(--marsala);
+  }
+  
+  .menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--marsala);
+    transition: width 0.3s ease;
+  }
+  
+  .menu-link:hover::after {
+    width: 100%;
+  }
+  
+  .active-link {
+    color: var(--marsala);
+  }
+  
+  .active-link::after {
+    width: 100%;
+  }
+  
+  /* Seções */
+  .section {
+    padding: 4rem 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .section.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .highlight {
+    color: var(--marsala);
+  }
+  
+  /* Rodapé */
+  .footer {
+    padding: 3rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--cinza);
+    text-align: center;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--cinza);
+    color: var(--foreground);
+    transition: all 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    background-color: var(--marsala);
+    color: white;
+    transform: translateY(-5px);
+  }
+  
+  .footer-link svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .footer-text {
+    color: var(--foreground);
+    font-size: 0.875rem;
+  }
+  
+  /* Animações */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .reveal-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .reveal-section.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .animated-bg {
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .animated-bg::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(128, 0, 42, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+    animation: rotate 60s linear infinite;
+    z-index: -1;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+    
+    .menu {
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .section-title {
+      font-size: 1.75rem;
+    }
+  }

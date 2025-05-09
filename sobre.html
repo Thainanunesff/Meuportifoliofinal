@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Mim</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Estilos específicos da página sobre */
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    
+    @media (min-width: 768px) {
+      .about-container {
+        flex-direction: row;
+      }
+    }
+    
+    .about-image {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .profile-image {
+      width: 16rem;
+      height: 16rem;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--marsala);
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .profile-image:hover {
+      transform: scale(1.05);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: var(--cinza);
+      color: var(--marsala);
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      background-color: var(--marsala);
+      color: white;
+      transform: translateY(-5px);
+    }
+    
+    .social-link svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    
+    .about-content {
+      flex: 2;
+    }
+    
+    .about-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--marsala);
+      margin-bottom: 1.5rem;
+    }
+    
+    .about-text {
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+    
+    .skills {
+      margin-top: 2rem;
+    }
+    
+    .skills-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    
+    .skill-tag {
+      background-color: rgba(128, 0, 42, 0.1);
+      color: var(--marsala);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.875rem;
+      transition: all 0.3s ease;
+    }
+    
+    .skill-tag:hover {
+      background-color: var(--marsala);
+      color: white;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body class="animated-bg">
+  <div class="container">
+    <!-- Cabeçalho -->
+    <header>
+      <div class="logo">
+        <a href="index.html">Thainá Nunes</a>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="projetos.html" class="menu-link">projetos</a></li>
+          <li><a href="sobre.html" class="menu-link active-link">sobre mim</a></li>
+          <li><a href="contato.html" class="menu-link">contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+      <section id="sobre" class="section reveal-section">
+        <h1 class="section-title">Sobre <span class="highlight">Mim</span></h1>
+        
+        <div class="about-container">
+          <div class="about-image">
+            <img src="/imagens/Imagem do WhatsApp de 2025-05-06 à(s) 11.39.00_d946abd8.jpg" alt="Thainá Nunes" class="profile-image">
+            
+            <div class="social-links">
+              <a href="https://github.com/Thainanunesff" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/thainanunesf" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a href="https://instagram.com/thainanunesfreire" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <div class="about-content">
+            
+            <h2 class="about-title">Olá, eu sou <b>Thainá Nunes</b></h2>
+            <p class="about-text">
+              Sou estudante de análise e desenvolvimento de sistemas com foco em aplicações web e banco de dados. Estou sempre explorando novas formas de transformar ideias em soluções práticas através do código, com dedicação constante ao aprendizado e à evolução técnica.
+            </p>
+            
+            <p class="about-text">
+              Minha jornada na programação começou com a curiosidade de entender como as coisas funcionam na web.
+              Desde então, tenho me dedicado a aprender e aprimorar minhas habilidades em diversas tecnologias.
+            </p>
+            
+            <p class="about-text">
+            Tenho experiência com JavaScript, HTML, CSS, Node.js, Express, MySQL e SQL, além de conhecimentos em Python. Estou desenvolvendo projetos práticos que integram front-end e back-end, com foco em lógica, organização e uso de tecnologias essenciais do ecossistema web.
+            </p>
+            
+            <p class="about-text">
+              Sou uma pessoa com perfil analítico, organizada, comunicativa e com facilidade para aprender de forma autônoma. Gosto de escrever códigos limpos, claros e objetivos, e valorizo boas práticas de versionamento com Git e GitHub, além de manter uma documentação coerente e acessível. Quando não estou codando, gosto de explorar novas tecnologias e aprender sobre design. Acredito que
+              essas atividades me ajudam a manter a criatividade e trazer novas perspectivas para meus projetos.
+            </p>
+            
+            <div class="skills">
+              <h3 class="skills-title">Minhas habilidades</h3>
+              <div class="skills-list">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+      <p class="footer-text">© <span id="currentYear"></span> Thainá Nunes. Todos os direitos reservados.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
